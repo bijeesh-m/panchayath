@@ -71,13 +71,14 @@ function Header() {
                   Certificates
                 </Link>
                 <ul class="dropdown-menu">
-                  {certificate.map((value, index) => (
+                  {certificate&&certificate.map((value, index) => (
                     <li key={index}>
                       <Link class="dropdown-item" to={`/showRequirement/${value._id}`}>
                         {value.certificateName}
                       </Link>
                     </li>
                   ))}
+                  {certificate.length===0 && <li className=" no-certificate text-danger">Certificates Not Found!</li>}
                 </ul>
               </li>
             

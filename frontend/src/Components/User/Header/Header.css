@@ -3,6 +3,11 @@
 
 }
 
+.no-certificate{
+    white-space: nowrap;
+    padding: 0px 2px 0px 2px;
+}
+
 .loginBtn{
     color: rgb(255, 255, 255);
     background-color: blueviolet;

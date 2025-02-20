@@ -184,6 +184,7 @@ a {
 /* Sidebar.css */
 
 .sidenav {
-    height: 100vh; /* Set the height to 100% of the viewport height */
+    /* min-height: 110vh; Set the height to 100% of the viewport height */
     background-color: #333; /* Set your preferred background color */
+    height: auto;
   }

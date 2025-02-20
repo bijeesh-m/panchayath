@@ -1,6 +1,12 @@
+.footer{
+ border-top: .01px solid rgb(195, 193, 193);
+
+}
+
+
 .site-footer
 {
-  background-color:#ffffff;
+  /* background-color:#ffffff; */
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
