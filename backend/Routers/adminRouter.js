@@ -1,5 +1,5 @@
 const express=require("express");
-const { adminLogin, adminHeader, userList, blockuser, addCertificate, addCertificateRequirement, fetchAppliedCertificate, fetchAppliedSpecificCert, verifyCertificate, getAllComplaints, fetchSpecificComplaint, changeComplantStatus, addProjectDetails, fetchAllMarriageCert, fetchSpecificMarriage, verifyMarriageCert } = require("../Controllers/adminControllers");
+const { adminLogin, adminHeader, userList, blockuser, addCertificate, addCertificateRequirement, fetchAppliedCertificate, fetchAppliedSpecificCert, verifyCertificate, getAllComplaints, fetchSpecificComplaint, changeComplantStatus, addProjectDetails, fetchAllMarriageCert, fetchSpecificMarriage, verifyMarriageCert, removeCertificate } = require("../Controllers/adminControllers");
 const adminAuth = require("../Middleware/adminAuth");
 const { fetchAllCertificate } = require("../Controllers/certificateController");
 const createMulterInstance = require("../Middleware/multer");
@@ -30,6 +30,10 @@ router.get("/fetchSpecificComplaint/:id",adminAuth,fetchSpecificComplaint)
 router.get("/changecomplaintstatus/:id",adminAuth,changeComplantStatus)
 router.get("/fetchallmarriageCert",adminAuth,fetchAllMarriageCert)
 router.get("/fetchmarriageCert/:id",adminAuth,fetchSpecificMarriage)
+
+//DELETE METHOD
+
+router.delete("/remove-cert/:certId", adminAuth, removeCertificate  )
 
 
 module.exports = router;

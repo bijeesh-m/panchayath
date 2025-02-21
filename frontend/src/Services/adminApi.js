@@ -75,3 +75,9 @@ export const fetchSpecificMarriageCert=(id)=>{
   return adminInstance.get(`/fetchmarriageCert/${id}`)
 }
 
+
+// DELETE
+
+export const removeCertificate=(id)=>{
+  return adminInstance.delete(`/remove-cert/${id}`)
+}
