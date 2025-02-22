@@ -116,16 +116,19 @@ module.exports.addCertificate = async (req, res, next) => {
 };
 
 module.exports.addCertificateRequirement = async (req, res, next) => {
-    const { certRequirement, certificateId, certificateName } = req.body;
+    const { certRequirement, certificateId } = req.body;
+
+    console.log(req.body);
     try {
-        const certRequirementDetails = new certRequirementModel({
-            certificateName: certificateName,
-            certificateId: certificateId,
-            Requirements: certRequirement,
+        const certRequirementArray = certRequirement.split(",").map((req) => req.trim());
+
+        await certificateModel.findByIdAndUpdate(certificateId, {
+            $push: { requirements: { $each: certRequirementArray } },
         });
-        await certRequirementDetails.save();
+
         return res.json({ message: "Form submitted successfully", status: true });
     } catch (error) {
+        console.error(error);
         return res.json({
             message: "Internal server error in add requirement",
             status: false,

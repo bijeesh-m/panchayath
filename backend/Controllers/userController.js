@@ -137,6 +137,10 @@ module.exports.fetchSelectedCertDetails = async (req, res, next) => {
     const certificateDetails = await certRequirementModel.find({
       certificateId,
     });
+
+    console.log(certificateDetails);
+
+    
     return res.json({ status: true, certDetails: certificateDetails });
   } catch (error) {
     return res.json({

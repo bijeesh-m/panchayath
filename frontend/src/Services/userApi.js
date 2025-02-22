@@ -45,7 +45,7 @@ export const fetchAllCertificate = () => {
 };
 
 export const getCertificateDetails = (certId) => {
-  return userInstance.get(`/fetchCertRequiredDetails/${certId}`);
+  return userInstance.get(`/certificate/${certId}/requirements`);
 };
 
 export const getUserAppliedCert = (userId) => {
