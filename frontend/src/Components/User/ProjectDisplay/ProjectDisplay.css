@@ -4,10 +4,24 @@
 
 .accordionMainDiv {
   min-height: 460px;
+
+
 }
 
-.projectDate {
-  padding-left: 220px;
+
+
+
+.project-container {
+  display: flex;
+  padding: 15px;
+  gap: 50px;
+
+}
+
+.pro-dec{
+  display:  flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .descriptionDiv {
@@ -30,6 +44,3 @@
   display: flex;
 }
 
-.website{
-   margin-left: 200px;
-}
