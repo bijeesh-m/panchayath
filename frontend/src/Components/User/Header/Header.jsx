@@ -34,7 +34,7 @@ function Header() {
               className="govLogo"
               src="https://gad.kerala.gov.in/sites/default/files/inline-images/kerala%20final%20emblem_0.jpg"
             ></img>
-            <span className="mx-2">Ente panchayath</span>
+            <span className="mx-2">Panchayath</span>
           </Link>
           <button
             class="navbar-toggler"
