@@ -47,11 +47,6 @@ function MarriageForm() {
     HusbandName: Yup.string()
       .strict(true)
       .trim("* Name must not contain white space")
-      .test(
-        "* no-whitespace",
-        "* Name must not contain white space",
-        (value) => !/\s/.test(value)
-      )
       .min(3, "*Name must be at least 3 characters long")
       .matches(/^[A-Za-z]+$/, "* Name must only contain characters")
       .required("* This field is required"),
@@ -60,22 +55,13 @@ function MarriageForm() {
     PlaceOfMarriage: Yup.string()
       .strict(true)
       .trim("* Name must not contain white space")
-      .test(
-        "* no-whitespace",
-        "* Name must not contain white space",
-        (value) => !/\s/.test(value)
-      )
       .min(3, "*Name must be at least 3 characters long")
       .matches(/^[A-Za-z]+$/, "* Name must only contain characters")
       .required("* This field is required"),
     HusbandNationality: Yup.string()
       .strict(true)
       .trim("* Name must not contain white space")
-      .test(
-        "* no-whitespace",
-        "* Name must not contain white space",
-        (value) => !/\s/.test(value)
-      )
+
       .min(3, "*Name must be at least 3 characters long")
       .matches(/^[A-Za-z]+$/, "* Name must only contain characters")
       .required("* This field is required"),
@@ -118,11 +104,7 @@ function MarriageForm() {
     WifeName: Yup.string()
       .strict(true)
       .trim("* Name must not contain white space")
-      .test(
-        "* no-whitespace",
-        "* Name must not contain white space",
-        (value) => !/\s/.test(value)
-      )
+
       .min(3, "*Name must be at least 3 characters long")
       .matches(/^[A-Za-z]+$/, "* Name must only contain characters")
       .required("* This field is required"),
@@ -130,11 +112,7 @@ function MarriageForm() {
     WifeNationality: Yup.string()
       .strict(true)
       .trim("* Name must not contain white space")
-      .test(
-        "* no-whitespace",
-        "* Name must not contain white space",
-        (value) => !/\s/.test(value)
-      )
+
       .min(3, "*Name must be at least 3 characters long")
       .matches(/^[A-Za-z]+$/, "* Name must only contain characters")
       .required("* This field is required"),
